@@ -1,0 +1,21 @@
+The original Game Boy cartridges were designed to typically hold 8 KB to 32 KB of ROM, but as game development progressed and game sizes increased, the cartridges began to incorporate more advanced memory management techniques.
+
+Swappable Memory in Game Boy Cartridges
+Memory Banking: To overcome the limitations of the fixed memory size, many cartridges employed a technique called memory banking. This allows the cartridge to effectively "swap" different sections of ROM in and out of the addressable memory space of the Game Boy, enabling games to use larger amounts of data than could be directly accessed at once.
+
+MBC (Memory Bank Controller):
+
+Cartridges that used memory banking typically included a chip known as a Memory Bank Controller (MBC). The MBC manages which part of the ROM is currently accessible based on the game's requirements.
+Different versions of MBCs (e.g., MBC1, MBC2, MBC3, MBC5) supported varying amounts of memory and different features. For example, MBC1 could handle up to 2 MB of ROM and 128 KB of RAM, while MBC5 could manage up to 8 MB of ROM.
+Bank Switching:
+
+When a game needed to access data that was not currently in the active memory bank, the MBC would switch to another bank of ROM. This switching is typically handled by writing specific values to memory-mapped registers, allowing the game to request different banks as needed.
+This means that larger games could store more complex graphics, sound, and gameplay elements by utilizing this banking technique.
+Impact on Game Design
+Larger Games: This memory management technique allowed for more extensive and richer games on the Game Boy, leading to iconic titles that pushed the limits of the hardware.
+Enhanced Graphics and Sound: Developers could include more intricate graphics and sound data, leading to a better overall gaming experience.
+
+######
+The emulator must accurately replicate the behavior of the MBC, which includes responding to memory accesses and handling bank switching based on the instructions that the game executes.
+
+Each type of MBC (e.g., MBC1, MBC2, MBC3, etc.) has its own specifications for how it manages memory. You will need to implement these rules so that when a game writes to specific registers, the emulator updates the current active ROM bank correctly.
