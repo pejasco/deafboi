@@ -1,0 +1,11 @@
+//static local variable instide a function retains its value between function calls
+//it is initalised onlyonce, and its lifetime extends across the entrie run of the
+//program.
+
+//static global variables:
+//A static global variable is limited to the file in which it is declared. It cannot
+//be accessed from other files, providing internal linkage.
+
+//Static functions:
+//A static function is a function is limited to the file in which it is declared.
+
